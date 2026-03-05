@@ -12,7 +12,7 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 | [rice-quant](skills/rice-quant/) | 米筐 RQData Python API — A股、港股、期货、期权、基金、债券数据 | 9 | RQData Docs |
 | [nautilus-trader](skills/nautilus-trader/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
 | [wtpy](skills/wtpy/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
-| [tqsdk](skills/tqsdk/) | 天勤 TqSdk Python 量化交易框架 — 期货/期权/股票策略开发、回测与实盘 | 30 | Official Docs |
+| [tqsdk](skills/tqsdk/) | 天勤 TqSdk Python 量化交易框架 — 期货/期权/股票策略开发、回测与实盘，含 50+ 策略示例 | 47 | Official Docs + Strategies |
 
 ### ctp-api
 
@@ -94,25 +94,27 @@ WonderTrader/wtpy 量化交易开发综合指南。整合官方文档（Read the
 
 ### tqsdk
 
-天勤量化 TqSdk — 信易科技开发的开源 Python 量化交易框架，基于快期交易及行情服务器，支持期货、期权、股票的行情获取、策略开发、回测与实盘交易。
+天勤量化 TqSdk — 信易科技开发的开源 Python 量化交易框架，基于快期交易及行情服务器，支持期货、期权、股票的行情获取、策略开发、回测与实盘交易。包含 50+ 完整策略示例（趋势、套利、均值回归等）。
 
 **Use when:**
 - 使用 tqsdk 编写量化交易策略
 - 获取期货/期权/股票实时行情、K线、Tick 数据
 - 进行策略回测（Tick 级和 K 线级）
 - 实盘下单交易（直连 CTP 或快期通道）
-- 使用 tqsdk 算法模块、技术指标计算
-- 策略图形化界面开发
+- 使用 tqsdk 算法模块（TWAP/VWAP）、技术指标计算（ta/tafunc）
+- 使用 TargetPosTask 目标持仓交易
+- 策略图形化界面开发 (Web GUI)
 
 **Categories covered:**
 - Getting started and quick start (Critical)
 - TqApi core framework and business objects (Critical)
-- Algorithm module and trading strategies (High)
-- Technical indicators (tafunc / ta) (High)
+- Algorithm module — TWAP, VWAP, TargetPosScheduler (High)
+- Technical indicators — tafunc / ta (High)
 - Backtesting and parameter optimization (High)
-- CTP direct connection (tqctp) (Medium)
+- Strategy examples — trend, arbitrage, mean reversion (High)
+- CTP direct connection (tqctp) and multi-account (Medium)
 - Risk control module (Medium)
-- GUI and IDE integration (Cursor/Trae) (Low)
+- GUI, IDE integration (Cursor/Trae), and EDB data service (Low)
 
 ## Installation
 

@@ -525,6 +525,20 @@ while True:
 - **api_ref_13_*.md** - risk_rule风控模块、TqKq、算法模块示例
 - **api_ref_14_*.md** - EDB数据服务+Coze自然语言投研
 
+### 策略示例（约50个完整策略，来自 shinnytech.com）
+
+**趋势策略 (15个):**
+- **strategies_trend_a_p1~p4.md** - TRIX、分形趋势、CMO动量、涡旋指标、Hull均线、Keltner通道、Qstick、Aroon
+- **strategies_trend_b_p1.md** - 动量排名、量价趋势(VPT)
+- **strategies_trend_b_p2.md** - Aberration布林带、菲阿里四价、自动扶梯
+- **strategies_trend_b_p3.md** - Dual Thrust、R-Breaker
+
+**套利策略 (15个):**
+- **strategies_arbitrage_p1~p5.md** - 热卷-不锈钢、玻璃-纯碱、白糖-淀粉、PTA产业链、生猪饲料、焦煤-焦炭、MTO甲醇制烯烃、铜铝比价、大豆压榨、裂解价差、股指跨期、Box期权、多期限套利、钢厂利润、多油脂套利
+
+**均值回归与其他策略 (15个):**
+- **strategies_other_p1~p5.md** - 卡尔曼滤波配对、距离法配对、Pivot Point、CCI、RSI超买超卖、Z-Score、均值回归、冰山委托、盘口算法、POV成交量比例、随机森林预测、ATR波动率、海龟交易法、VWAP算法、网格交易
+
 需要详细信息时，请查阅对应的参考文件。
 
 ## 资源链接
