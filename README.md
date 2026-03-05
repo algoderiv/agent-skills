@@ -6,9 +6,16 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 
 ## Available Skills
 
+| Skill | Description | Refs | Source |
+|-------|-------------|------|--------|
+| [ctp-api](skills/ctp-api/) | CTP 6.7.8 综合交易平台 API — 期货期权交易接口、行情订阅、委托执行 | 52 | Official PDF (2466p) |
+| [rice-quant-dev-guide](skills/rice-quant-dev-guide/) | 米筐 RQData Python API — A股、港股、期货、期权、基金、债券数据 | 9 | RQData Docs |
+| [nautilus-trader-dev-guide](skills/nautilus-trader-dev-guide/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
+| [wtpy-dev-guide](skills/wtpy-dev-guide/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
+
 ### ctp-api
 
-CTP (Comprehensive Transaction Platform) 6.7.8 API documentation for Chinese futures and options trading. Contains 53 reference files extracted from the official 2466-page PDF.
+CTP (Comprehensive Transaction Platform) 6.7.8 API documentation for Chinese futures and options trading. Contains 52 reference files extracted from the official 2466-page PDF.
 
 **Use when:**
 - Developing with CTP API for futures/options trading
@@ -61,6 +68,29 @@ Developer guide for NautilusTrader, a high-performance algorithmic trading platf
 - Rust crate structure and conventions (High)
 - Contribution guidelines (Medium)
 
+### wtpy-dev-guide
+
+WonderTrader/wtpy 量化交易开发综合指南。整合官方文档（Read the Docs）、社区学习笔记和非官方整理文档三大来源，覆盖 155 页文档。
+
+**Use when:**
+- 使用 wtpy 开发 CTA/SEL/HFT/UFT 策略
+- 进行策略回测、仿真交易或实盘交易
+- 配置 WonderTrader 引擎和交易/行情接口（CTP/openctp/XTP）
+- 处理行情数据（DSB/CSV 转换、数据录制、WtDataHelper）
+- 开发自定义执行器（ExtExecuter）或行情解析器（ExtParser）
+- 使用 WtMonSvr 监控服务或 WtStudio 工作台
+- WonderTrader C++ 核心开发和编译
+
+**Categories covered:**
+- Getting started and architecture (Critical)
+- Strategy development and API reference (Critical)
+- Configuration files (High)
+- Data tools and management (High)
+- Advanced development — ExtParser, ExtExecuter, C++ (Medium)
+- Web console, WtStudio, and operations (Medium)
+- FAQ and troubleshooting (Medium)
+- Source code analysis (Low)
+
 ## Installation
 
 ```bash
@@ -88,6 +118,9 @@ Fetch CZCE futures daily data using rqdatac
 ```
 How do I build NautilusTrader from source with Rust?
 ```
+```
+用 wtpy 写一个 DualThrust CTA 策略并回测
+```
 
 ## Skill Structure
 
@@ -95,12 +128,14 @@ Each skill contains:
 - `SKILL.md` - Instructions for the agent
 - `references/` - Supporting documentation (loaded on demand)
 - `scripts/` - Helper scripts for automation (optional)
+- `{skill-name}.zip` - Packaged for claude.ai upload
 
 ## Sources
 
 - **CTP API**: Official CTP 6.7.8 PDF documentation (2466 pages, Shanghai Futures Information Technology)
 - **RQData**: [RiceQuant RQData](https://www.ricequant.com/doc/rqdata) official API documentation
 - **NautilusTrader**: [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) official developer documentation
+- **WonderTrader/wtpy**: [Official docs](https://wtdocs.readthedocs.io/zh/latest/), [Learning Notes](https://zzzzhej.github.io/WonderTrader-Learning-Notes/), [Unofficial docs](https://dumengru.github.io/docs_wondertrader/)
 
 ## License
 
