@@ -9,9 +9,9 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 | Skill | Description | Refs | Source |
 |-------|-------------|------|--------|
 | [ctp-api](skills/ctp-api/) | CTP 6.7.8 综合交易平台 API — 期货期权交易接口、行情订阅、委托执行 | 52 | Official PDF (2466p) |
-| [rice-quant-dev-guide](skills/rice-quant-dev-guide/) | 米筐 RQData Python API — A股、港股、期货、期权、基金、债券数据 | 9 | RQData Docs |
-| [nautilus-trader-dev-guide](skills/nautilus-trader-dev-guide/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
-| [wtpy-dev-guide](skills/wtpy-dev-guide/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
+| [rice-quant](skills/rice-quant/) | 米筐 RQData Python API — A股、港股、期货、期权、基金、债券数据 | 9 | RQData Docs |
+| [nautilus-trader](skills/nautilus-trader/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
+| [wtpy](skills/wtpy/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
 
 ### ctp-api
 
@@ -32,7 +32,7 @@ CTP (Comprehensive Transaction Platform) 6.7.8 API documentation for Chinese fut
 - Error codes and troubleshooting (Medium)
 - Regulatory monitoring (Medium)
 
-### rice-quant-dev-guide
+### rice-quant
 
 RiceQuant RQData Python API for accessing Chinese financial market data — A-shares, Hong Kong stocks, futures, options, funds, bonds, and macro data.
 
@@ -50,7 +50,7 @@ RiceQuant RQData Python API for accessing Chinese financial market data — A-sh
 - Fund and index data (Medium)
 - Alternative and macro data (Low-Medium)
 
-### nautilus-trader-dev-guide
+### nautilus-trader
 
 Developer guide for NautilusTrader, a high-performance algorithmic trading platform with Python and Rust.
 
@@ -68,7 +68,7 @@ Developer guide for NautilusTrader, a high-performance algorithmic trading platf
 - Rust crate structure and conventions (High)
 - Contribution guidelines (Medium)
 
-### wtpy-dev-guide
+### wtpy
 
 WonderTrader/wtpy 量化交易开发综合指南。整合官方文档（Read the Docs）、社区学习笔记和非官方整理文档三大来源，覆盖 155 页文档。
 

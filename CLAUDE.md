@@ -21,7 +21,7 @@ skills/
 
 ### Naming Conventions
 
-- **Skill directory**: `kebab-case` (e.g., `ctp-api`, `rice-quant-dev-guide`)
+- **Skill directory**: `kebab-case` (e.g., `ctp-api`, `rice-quant`)
 - **SKILL.md**: Always uppercase, always this exact filename
 - **References**: `kebab-case.md` (e.g., `trader-api.md`, `getting-started.md`)
 - **Zip file**: Must match directory name exactly: `{skill-name}.zip`

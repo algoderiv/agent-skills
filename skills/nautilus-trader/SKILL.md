@@ -1,20 +1,20 @@
 ---
-name: rice-quant-dev-guide
-description: RiceQuant RQData Python API - 米筐金融数据Python接口，用于获取中国A股、港股、期货、期权、基金、债券、宏观经济和另类数据。当使用rqdatac编写量化交易和金融分析Python代码时使用此skill。
+name: nautilus-trader
+description: NautilusTrader developer guide for contributing, building from source, testing, and extending the platform. Use this skill for NautilusTrader development setup, Rust/Python integration, testing practices, and contribution guidelines.
 ---
 
-# Rq_Dev Skill
+# Nt_Dev Skill
 
-Ricequant rqdata python api - 米筐金融数据python接口，用于获取中国a股、港股、期货、期权、基金、债券、宏观经济和另类数据。当使用rqdatac编写量化交易和金融分析python代码时使用此skill。, generated from official documentation.
+Nautilustrader developer guide for contributing, building from source, testing, and extending the platform. use this skill for nautilustrader development setup, rust/python integration, testing practices, and contribution guidelines., generated from official documentation.
 
 ## When to Use This Skill
 
 This skill should be triggered when:
-- Working with rq_dev
-- Asking about rq_dev features or APIs
-- Implementing rq_dev solutions
-- Debugging rq_dev code
-- Learning rq_dev best practices
+- Working with nt_dev
+- Asking about nt_dev features or APIs
+- Implementing nt_dev solutions
+- Debugging nt_dev code
+- Learning nt_dev best practices
 
 ## Quick Reference
 
@@ -24,47 +24,40 @@ This skill should be triggered when:
 
 ### Example Code Patterns
 
-**Example 1** (rust):
-```rust
-all_instruments(type=None, date=None, market='cn')
+**Example 1** (bash):
+```bash
+uv sync --active --all-groups --all-extras
 ```
 
-**Example 2** (rust):
-```rust
-rqdatac.all_instruments(type=None, market='hk', date=None)
+**Example 2** (bash):
+```bash
+make install
 ```
 
-**Example 3** (rust):
-```rust
-get_pit_financials_ex(order_book_ids, fields, start_quarter, end_quarter, date=None, statements='latest', market='cn')
+**Example 3** (typescript):
+```typescript
+crates/<crate_name>/└── benches/    ├── foo_criterion.rs   # Criterion 组    └── foo_iai.rs         # iai 微基准
 ```
 
-**Example 4** (rust):
-```rust
-futures.get_dominant(underlying_symbol, start_date=None, end_date=None, rule=0, rank=1, market='cn')
-```
-
-**Example 5** (json):
+**Example 4** (json):
 ```json
-[In]
-futures.get_dominant('IF', '20160801')
-[Out]
-date
-20160801    IF1608
+[[bench]]name = "foo_criterion"             # benches/ 下文件名（不含扩展名）path = "benches/foo_criterion.rs"harness = false                    # 关闭默认的 libtest harness
+```
+
+**Example 5** (bash):
+```bash
+make pytest# oruv run --active --no-sync pytest --new-first --failed-first# or simplypytest
 ```
 
 ## Reference Files
 
 This skill includes comprehensive documentation in `references/`:
 
-- **alternative_data.md** - Alternative Data documentation
-- **api_reference.md** - Api Reference documentation
-- **derivatives.md** - Derivatives documentation
-- **fixed_income.md** - Fixed Income documentation
-- **funds_indices.md** - Funds Indices documentation
+- **building.md** - Building documentation
 - **getting_started.md** - Getting Started documentation
-- **risk_analytics.md** - Risk Analytics documentation
-- **stocks.md** - Stocks documentation
+- **other.md** - Other documentation
+- **rust.md** - Rust documentation
+- **testing.md** - Testing documentation
 
 Use `view` to read specific reference files when detailed information is needed.
 
