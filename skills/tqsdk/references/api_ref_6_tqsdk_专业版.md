@@ -1,0 +1,120 @@
+# Api Ref - Part 6
+
+**Topics:** TqSdk 专业版
+
+---
+
+## TqSdk 专业版
+
+**URL:** https://doc.shinnytech.com/tqsdk/latest/profession.html
+
+**Contents:**
+- TqSdk 专业版
+- 快期专业版产品使用权限
+- 更稳定的行情服务器
+- 更多的期货公司支持
+- 股票行情
+- 股票模拟交易
+- 下载数据功能
+- EDB Server 数据服务
+- 其他相关函数
+- 工作时间内的天勤客服支持
+
+TqSdk 中大部分功能是供用户免费使用的, 同时我们也提供了专业版的增值功能供用户选择
+
+如果想使用 TqSdk 专业版功能，可以登录 个人中心 申请15天试用或正式购买
+
+在当用户购买专业版的产品服务时，不仅仅是包含 TqSdk 专业版的功能，同时也包含一份对应时长的快期专业版使用权限
+
+快期专业版 是专门为专业用户开发的一套PC客户端，能支持用户多账户，多柜台(CTP,CTPMINI,易盛v10,v9,大连Xone,融航,杰宜斯)等柜台登录
+
+此外还提供了丰富的交易手段与监控功能，帮助用户在程序化交易的同时能有一个PC端进行辅助监控与交易
+
+其中的持仓账户监控功能，内置了一基于 grafana 实时的监控手段，每10s存储一次用户的账户和持仓数据在本地，供用户对这些数据进行可视化分析
+
+例如回答用户今天的客户权益变动情况，和今天的最大权益和最小权益的发生时间等
+
+在每次的行情服务器升级当中，我们会优先选择连接到免费版行情服务器中的百分之十左右的用户进行升级，然后在稳定后逐步扩大免费版的升级范围
+
+专业版的行情服务器会在免费版全部升级成功且没有问题之后再进行升级，因此对于 TqSdk 的专业版用户来说，会有更稳定行情服务器连接
+
+对于 TqSdk 免费版，用户只能选择指定的期货公司进行免费实盘交易，专业版支持用户选择其他的期货公司来进行交易
+
+支持免费实盘交易的期货公司，和 全部期货公司的名单列表
+
+TqSdk 免费版和专业版均支持用户绑定3个账户，如需一个快期账户支持更多的实盘账户，请联系工作人员进行批量购买 QQ:532428198
+
+如果需要注册快期账户或者修改您的快期账户绑定的实盘账户，请点击 登录用户管理中心
+
+登录成功后显示如下，在下方红框处,用户可以自行解绑/绑定实盘账户，其中解绑操作每天限定一次
+
+TqSdk 免费版本提供全部的期货、商品/金融期权和上证50、沪深300和中证500的实时行情
+
+购买或申请 TqSdk 专业版试用后可提供A股股票的实时和历史行情，TqSdk 中股票示例代码参考如下:
+
+TqSdk 提供了 TqKqStock 方法供用户来进行股票的模拟交易
+
+需要注意股票模拟交易下，get_account，get_order，get_position 会返回对应股票交易模型下的 objs ，如 SecurityAccount， SecurityOrder，SecurityPosition
+
+数据下载工具 DataDownloader 是 TqSdk 专业版中的功能
+
+支持专业版用户下载目前 TqSdk 提供的全部期货、期权和股票类的历史数据，下载数据支持 tick 级别精度和任意 kline 周期
+
+拥有 TqSdk 专业版权限后，还可以通过 EDB server 的数据服务获取更丰富的数据能力，包括：
+
+行情历史服务：获取自 2021 年 1 月 1 日(含)以来的期货分钟线数据（以及日线数据），用于回测、复盘与数据分析等场景。
+
+非价量数据服务：获取基本面/宏观等 EDB 指标数据（如库存、交割量、现货、宏观经济指标等），便于研究、因子开发与报表看板构建。
+
+具体接口说明与使用方式可参考 EDB 数据服务产品文档 （Token 服务、行情历史服务、非价量数据服务）。
+
+如果你希望用自然语言完成“取数 → 验证想法 → 回测 → 产出代码/图表/报告”的投研闭环，可参考 自然语言投研：EDB 数据服务 + 扣子（Coze）。
+
+get_kline_data_series() 以起始日期获取 Dataframe 格式的 kline 数据
+
+如果您是 TqSdk 专业版的年费用户，那么我们将会单独为您建立一个讨论组，里面会有 TqSdk 的专门技术支持人员在工作时间内优先回答您的问题
+
+© 版权所有 2018-2026, TianQin。
+
+**Examples:**
+
+Example 1 (unknown):
+```unknown
+SSE.600000 - 上交所浦发银行股票编码
+SZSE.000001 - 深交所平安银行股票编码
+SSE.000016 - 上证50指数
+SSE.000300 - 沪深300指数
+SSE.000905 - 中证500指数
+SSE.510050 - 上交所上证50etf
+SSE.510300 - 上交所沪深300etf
+SZSE.159919 - 深交所沪深300etf
+SSE.10002513 - 上交所上证50etf期权
+SSE.10002504 - 上交所沪深300etf期权
+SZSE.90000097 - 深交所沪深300etf期权
+```
+
+Example 2 (python):
+```python
+from tqsdk import TqApi, TqAuth, TqKqStock
+
+tq_kq_stock = TqKqStock()
+api = TqApi(account=tq_kq_stock, auth=TqAuth("快期账户", "账户密码"))
+quote = api.get_quote("SSE.688529")
+print(quote)
+# 下单限价单
+order = api.insert_order("SSE.688529", volume=200, direction="BUY", limit_price=quote.ask_price1)
+while order.status == 'ALIVE':
+    api.wait_update()
+    print(order)  # 打印委托单信息
+
+print(api.get_account())  # 打印快期股票模拟账户信息
+
+print(api.get_position("SSE.688529"))  # 打印持仓信息
+
+for trade in order.trade_records.values():
+    print(trade)  # 打印委托单对应的成交信息
+api.close()
+```
+
+---
+

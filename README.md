@@ -12,6 +12,7 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 | [rice-quant](skills/rice-quant/) | 米筐 RQData Python API — A股、港股、期货、期权、基金、债券数据 | 9 | RQData Docs |
 | [nautilus-trader](skills/nautilus-trader/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
 | [wtpy](skills/wtpy/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
+| [tqsdk](skills/tqsdk/) | 天勤 TqSdk Python 量化交易框架 — 期货/期权/股票策略开发、回测与实盘 | 30 | Official Docs |
 
 ### ctp-api
 
@@ -91,6 +92,28 @@ WonderTrader/wtpy 量化交易开发综合指南。整合官方文档（Read the
 - FAQ and troubleshooting (Medium)
 - Source code analysis (Low)
 
+### tqsdk
+
+天勤量化 TqSdk — 信易科技开发的开源 Python 量化交易框架，基于快期交易及行情服务器，支持期货、期权、股票的行情获取、策略开发、回测与实盘交易。
+
+**Use when:**
+- 使用 tqsdk 编写量化交易策略
+- 获取期货/期权/股票实时行情、K线、Tick 数据
+- 进行策略回测（Tick 级和 K 线级）
+- 实盘下单交易（直连 CTP 或快期通道）
+- 使用 tqsdk 算法模块、技术指标计算
+- 策略图形化界面开发
+
+**Categories covered:**
+- Getting started and quick start (Critical)
+- TqApi core framework and business objects (Critical)
+- Algorithm module and trading strategies (High)
+- Technical indicators (tafunc / ta) (High)
+- Backtesting and parameter optimization (High)
+- CTP direct connection (tqctp) (Medium)
+- Risk control module (Medium)
+- GUI and IDE integration (Cursor/Trae) (Low)
+
 ## Installation
 
 ```bash
@@ -121,6 +144,9 @@ How do I build NautilusTrader from source with Rust?
 ```
 用 wtpy 写一个 DualThrust CTA 策略并回测
 ```
+```
+用 tqsdk 订阅螺纹钢主力合约实时行情并下单
+```
 
 ## Skill Structure
 
@@ -136,6 +162,7 @@ Each skill contains:
 - **RQData**: [RiceQuant RQData](https://www.ricequant.com/doc/rqdata) official API documentation
 - **NautilusTrader**: [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) official developer documentation
 - **WonderTrader/wtpy**: [Official docs](https://wtdocs.readthedocs.io/zh/latest/), [Learning Notes](https://zzzzhej.github.io/WonderTrader-Learning-Notes/), [Unofficial docs](https://dumengru.github.io/docs_wondertrader/)
+- **TqSdk**: [TqSdk 官方文档](https://doc.shinnytech.com/tqsdk/latest/)
 
 ## License
 
