@@ -4,7 +4,7 @@ This file provides guidance to AI coding agents (Claude Code, Cursor, Copilot, e
 
 ## Repository Overview
 
-A collection of skills for AI coding agents focused on Chinese quantitative trading development. Skills are packaged instructions and reference documentation that extend agent capabilities for CTP futures/options trading, market data APIs, algorithmic trading platforms, and WonderTrader/wtpy quantitative trading development.
+A collection of skills for AI coding agents focused on quantitative trading development, video generation APIs, and payment platform integrations. Skills are packaged instructions and reference documentation that extend agent capabilities for CTP futures/options trading, market data APIs, algorithmic trading platforms, WonderTrader/wtpy quantitative trading development, Seedance video generation, and Stripe payment integration.
 
 ## Skill Structure
 

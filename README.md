@@ -1,6 +1,6 @@
 # Agent Skills
 
-A collection of skills for AI coding agents. Skills are packaged instructions and reference documentation that extend agent capabilities for Chinese quantitative trading development.
+A collection of skills for AI coding agents. Skills are packaged instructions and reference documentation that extend agent capabilities for quantitative trading development, video generation APIs, and payment platform integrations.
 
 Skills follow the [Agent Skills](https://agentskills.io/) format.
 
@@ -13,6 +13,8 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 | [nautilus-trader](skills/nautilus-trader/) | NautilusTrader 开发者指南 — 源码构建、Rust/Python 集成、测试 | 6 | GitHub Docs |
 | [wtpy](skills/wtpy/) | WonderTrader/wtpy 量化交易综合指南 — CTA/HFT/UFT 引擎、策略回测、实盘运维 | 13 | Official + Community |
 | [tqsdk](skills/tqsdk/) | 天勤 TqSdk Python 量化交易框架 — 期货/期权/股票策略开发、回测与实盘，含 50+ 策略示例 | 47 | Official Docs + Strategies |
+| [seedance1.5-api](skills/seedance1.5-api/) | Seedance 1.5/1.0 视频生成 API（火山方舟） — 文生视频、图生视频、有声视频、SDK 示例、提示词技巧 | 9 | Volcengine Docs |
+| [stripe](skills/stripe/) | Stripe 支付平台集成指南 — API 认证、Webhooks、错误处理、测试卡号、Connect 平台、SDK | 7 | Stripe Docs |
 
 ### ctp-api
 
@@ -116,6 +118,49 @@ WonderTrader/wtpy 量化交易开发综合指南。整合官方文档（Read the
 - Risk control module (Medium)
 - GUI, IDE integration (Cursor/Trae), and EDB data service (Low)
 
+### seedance1.5-api
+
+Seedance 1.5/1.0 系列视频生成 API 文档（火山方舟平台）。覆盖 Seedance 1.5 pro、1.0 pro、1.0 pro fast、1.0 lite 全系列模型，含 9 个参考文件。
+
+**Use when:**
+- 调用 Seedance API 生成视频（文生视频、图生视频）
+- 使用火山方舟平台的视频生成 API
+- 配置视频参数（分辨率、宽高比、时长、有声视频、样片模式）
+- 编写 Seedance 视频生成提示词（运镜、连续动作、风格关键词）
+- 使用 Python/Go/Java SDK 或 OpenAI 兼容 SDK 调用
+- 处理视频任务的创建、查询、取消和错误排查
+
+**Categories covered:**
+- Video generation API (create/query/list/delete tasks) (Critical)
+- Authentication and API Key configuration (Critical)
+- SDK examples — Python, Go, Java (High)
+- Prompt engineering guide — camera, style, audio (High)
+- Resolution/ratio pixel mapping tables (Medium)
+- OpenAI SDK compatibility (Medium)
+- Error codes reference (Medium)
+
+### stripe
+
+Stripe payment platform integration guide covering the core development workflows: API authentication, payment processing, webhook handling, error management, testing, and multi-party platforms with Stripe Connect.
+
+**Use when:**
+- Integrating Stripe payments (checkout, subscriptions, invoices)
+- Setting up API keys and authentication
+- Implementing webhook endpoints and signature verification
+- Handling Stripe errors and decline codes
+- Testing with sandbox/test cards
+- Building platforms or marketplaces with Stripe Connect
+- Managing connected accounts, charges, transfers, and payouts
+- Using Stripe SDKs (Node.js, Python, Ruby, Go, Java, PHP, .NET)
+
+**Categories covered:**
+- API keys and authentication (Critical)
+- Error handling — 9 error types with multi-language examples (Critical)
+- Webhooks — setup, signature verification, CLI testing, best practices (Critical)
+- Testing — 60+ test card numbers by brand/country, PaymentMethods (High)
+- Connect — account types, charge types, onboarding, payouts (High)
+- Development essentials — SDKs, expand, pagination, idempotency, metadata (High)
+
 ## Installation
 
 ```bash
@@ -149,6 +194,12 @@ How do I build NautilusTrader from source with Rust?
 ```
 用 tqsdk 订阅螺纹钢主力合约实时行情并下单
 ```
+```
+用 Seedance 1.5 pro API 生成一段 10 秒有声视频，首帧为上传的图片
+```
+```
+Help me set up Stripe webhooks with signature verification in Node.js
+```
 
 ## Skill Structure
 
@@ -165,6 +216,8 @@ Each skill contains:
 - **NautilusTrader**: [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) official developer documentation
 - **WonderTrader/wtpy**: [Official docs](https://wtdocs.readthedocs.io/zh/latest/), [Learning Notes](https://zzzzhej.github.io/WonderTrader-Learning-Notes/), [Unofficial docs](https://dumengru.github.io/docs_wondertrader/)
 - **TqSdk**: [TqSdk 官方文档](https://doc.shinnytech.com/tqsdk/latest/)
+- **Seedance 1.5 API**: [火山方舟视频生成 API](https://www.volcengine.com/docs/82379/1520757) official documentation
+- **Stripe**: [Stripe Docs](https://docs.stripe.com/development) — Get Started, Development, Connect
 
 ## License
 
